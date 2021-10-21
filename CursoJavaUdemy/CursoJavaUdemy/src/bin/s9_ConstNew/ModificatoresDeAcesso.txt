@@ -1,0 +1,9 @@
+private - o membro so pode ter acessado na propria classe
+
+(nada) - o membro so pode ser acessado nas classes do mesmo pacote
+
+protected - o membro so pode ser acessado no memso pacote, bem como em subbclasses de 
+pacote diferente
+
+public - o membro é acessado por todas classes (ao menos que ele resida em um modulo
+diferente que nao exporte o pacote onde ele está)

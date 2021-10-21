@@ -1,0 +1,3 @@
+product X, 1234.23
+product y, 1212.4
+product Z, 123

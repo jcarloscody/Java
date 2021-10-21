@@ -1,0 +1,54 @@
+Exceção é qq condicao de erro ou comportamento inesperado encontrado por um programa em execucao
+
+Em java, uma exceção é um objeto herdado da classe:
+
+java.lang.Exception - o compilador obriga a tratar ou propagar | 
+java.lang.RuntimeException - o compilador não obriga a tratar ou propagar
+
+Quando lançada, uma exceção é propagada na pilha de chamadas de métodos em execução,
+até que seja capturada(tratada) ou o programa seja encerrado, ou seja, quando acontece uma exceção
+em algum metodo e esse metodo for chamado por outro metodo que foi chamado por outro metodo que foi
+chamado por outro metodo para isso a gente chama de pilha de chamada e a gente tem um mapeamento 
+da ordem que essa da ordem que essas chamadas ocorreram.
+
+
+HIERARQUIA de exceção do java :::
+- temos uma superclasse generica Throwable de todas as excecoes e erros, a partir dessa classe
+temos as classes Error e Exception.
+
+- Class Error -> são erros que não se espera que o programador vai tratar, por exemplo o OutOfMemoryError, ou seja,
+estorou a memoria,  se ocorrer isso o programava vai quebra e vai ser encerrado. Um outro  exemplo é 
+o VirtualMachineError, ou seja, deu erro na JVM  assim o programa não vai tratar
+
+- Class Exception -> são os erros que ocorrem no programa que se espera que o programa vai tratar, tem
+a possibilidade de tratar. Exemplos de subclasses da class Exception,  a class IOException que vai tratar
+de algum erro de entrada/saida, a class RuntimeException que deriva os erros que nao te obriga a tratar como 
+IndexOutOfBoundsException, ouseja, tenta acessar uma posicao do array mas ele nao existe e o erro NullPointerException 
+ou seja, tentativa de acessar uma variavel que está valendo nulo.
+
+
+
+
+
+
+SUGESTAO DE PACOTES "MODEL"
+-> Model: ou mvc, model view controller, é uma forma de organizar a aplicacao. na aplicacao temos a interface
+com o user e tbm o pacote model que é o sistema em si. neste model temos os dados do sistema e a transformacao 
+dos dados do sistema conforme a regra de negocio. entao no pacote model temos o pacote entities, enums, exception, services.
+
+-> Entities -> neste pct temos as entidades de negocios, que sao  p ex produto cliente pedido, 
+
+
+
+
+
+
+
+
+
+SINTESE -----------
+Clausula Throws: propaga a excecao ao inves de trata-la
+throw: lança a excecao /"corta" o metodo
+Exception: compilador obriga a tratar ou propagar
+RuntimeException: compilador nao obriga
+

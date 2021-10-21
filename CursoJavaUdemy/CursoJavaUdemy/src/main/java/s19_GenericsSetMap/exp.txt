@@ -1,0 +1,79 @@
+Generics
+• Generics permitem que classes, interfaces e métodos possam ser
+parametrizados por tipo. Seus benefícios são:
+    •  Reuso
+    • Type safety
+    • Performance
+• Uso comum: coleções
+List<String> list = new ArrayList<>();
+list.add("Maria");
+String name = list.get(0);
+
+
+
+
+
+
+
+
+hashCode e equals
+    • São operações da classe Object utilizadas para comparar se um objeto
+    é igual a outro
+    • equals: lento, resposta 100%
+    • hashCode: rápido, porém resposta positiva não é 100%
+    • Tipos comuns (String, Date, Integer, Double, etc.) já possuem
+    implementação para essas operações. Classes personalizadas
+    precisam sobrepô-las.
+
+Regra de ouro do HashCode
+    • Se o hashCode de dois objetos for diferente, então os dois objetos são
+    diferentes
+    • Se o código de dois objetos for igual, muito provavelmente os objetos
+    são iguais (pode haver colisão)
+
+
+
+
+
+
+
+
+Set<T>
+    • Representa um conjunto de elementos (similar ao da Álgebra)
+    • Não admite repetições
+    • Elementos não possuem posição
+    • Acesso, inserção e remoção de elementos são rápidos
+    • Oferece operações eficientes de conjunto: interseção, união, diferença.
+    • Principais implementações:
+        • HashSet - mais rápido (operações O(1) em tabela hash) e não ordenado
+        • TreeSet - mais lento (operações O(log(n)) em árvore rubro-negra) e ordenado pelo
+        compareTo do objeto (ou Comparator)
+        • LinkedHashSet - velocidade intermediária e elementos na ordem em que são adicionados
+
+Alguns métodos importantes
+    • add(obj), remove(obj), contains(obj) 
+        • Baseado em equals e hashCode
+        • Se equals e hashCode não existir, é usada comparação de ponteiros
+    • clear()
+    • size()
+    • removeIf(predicate)
+    • addAll(other) - união: adiciona no conjunto os elementos do outro conjunto, sem repetição
+    • retainAll(other) - interseção: remove do conjunto os elementos não contitos em other
+    • removeAll(other) - diferença: remove do conjunto os elementos contidos em other
+
+Como as coleções Hash testam igualdade?
+    • Se hashCode e equals estiverem implementados:
+        • Primeiro hashCode. Se der igual, usa equals para confirmar.
+        • Lembre-se: String, Integer, Double, etc. já possuem equals e hashCode
+    • Se hashCode e equals NÃO estiverem implementados:
+        • Compara as referências (ponteiros) dos objetos.
+
+
+Recordando as implementações
+    • Principais implementações:
+    • HashSet - mais rápido (operações O(1) em tabela hash) e não ordenado
+    • TreeSet - mais lento (operações O(log(n)) em árvore rubro-negra) e ordenado
+    pelo compareTo do objeto (ou Comparator)
+    • LinkedHashSet - velocidade intermediária e elementos na ordem em que são
+    adicionados
+

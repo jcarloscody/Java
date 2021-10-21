@@ -1,0 +1,59 @@
+Paradigmas de programação
+        • Imperativo (C, Pascal, Fortran, Cobol)
+        • Orientado a objetos (C++, Object Pascal, Java (< 8), C# (< 3))
+        • Funcional (Haskell, Closure, Clean, Erlang)
+        • Lógico (Prolog)
+        • Multiparadigma (JavaScript, Java (8+), C# (3+), Ruby, Python, Go) 
+
+Paradigma funcional de programação
+
+Baseado no formalismo matemático Cálculo Lambda (Church 1930)
+                                                             Programação Imperativa                 Programação Funcional
+Como se descreve algo a ser computado (*)                    comandos ("como" - imperativa)         expressões ("o quê" - declarativa)
+Funções possuem transparência referencial
+(ausência de efeitos colaterais)                                fraco                                    forte
+Objetos imutáveis (*)                                           raro                                        comum
+Funções são objetos de primeira ordem                           não                                         sim
+Expressividade / código conciso                                 baixa                                        alta
+Tipagem dinâmica / inferência de tipos                          raro                                         comum
+
+
+Transparência referencial
+        Uma função possui transparência referencial se seu resultado for sempre o mesmo
+        para os mesmos dados de entrada. Benefícios: simplicidade e previsibilidade.
+
+
+Funções são objetos de primeira ordem (ou primeira classe)
+        Isso significa que funções podem, por exemplo, serem passadas como parâmetros de
+        métodos, bem como retornadas como resultado de métodos.
+
+
+O que são "expressões lambda"?
+        Em programação funcional, expressão lambda corresponde a uma
+        função anônima de primeira classe.
+
+
+Cálculo Lambda = formalismo matemático base da programação funcional
+Expressão lambda = função anônima de primeira classe
+
+
+
+
+
+Interface funcional
+        É uma interface que possui um único método abstrato. Suas
+        implementações serão tratadas como expressões lambda.
+
+        a interface funcional tem um mapeamento direto com a expressão lambda, no fundo a expressão lambda será
+        tratada como uma interface, no caso uma interface funcional a que tem apenas uma metódo funcional
+
+Algumas outras interfaces funcionais comuns
+    • Predicate
+        • https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html
+    • Function
+        • https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html
+    • Consumer
+        • https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html
+        • Nota: ao contrário das outras interfaces funcionais, no caso do Consumer, é
+        esperado ele possa gerar efeitos colaterais
+

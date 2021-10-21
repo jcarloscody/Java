@@ -1,0 +1,24 @@
+Class File-> representacao abstrata de um arquivo e seu caminho
+
+Class Scanner - leitor de texto
+
+Class IOException -> excecoes
+
+
+Class FileReader  - Stream de leitura de caracteres a partir de arquivos
+
+Class BufferedReader -  (mais rapido). ele vai ser instanciado a partir do FileReader e implementará algumas otimizações
+utilizando o Buffer de memoria 
+
+
+
+
+try-with-resources -> é um bloco try que declara um ou mais recursos, e garante que esses recursos serão 
+fechados ao final do bloco
+
+
+Class FileWriter(stream de escrita de caracteres em de arquivos)
+    -> cria/recria arquivo: new FileWriter(path)
+    -> acrescenta ao arquivo existente, ou seja, o arquivo sera aberto e o que vc escrever, será escrito ao fim: new FileWriter(path, true)
+
+Class BufferedWriter(mais rapido)
