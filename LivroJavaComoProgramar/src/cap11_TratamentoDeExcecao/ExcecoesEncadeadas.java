@@ -6,7 +6,7 @@ package cap11_TratamentoDeExcecao;
  * . Exceções encadeadas permitem que um objeto de exceção mantenha informações
  * completas do rastreamento de pilha da exceção original.
  */
-public class ExceçõesEncadeadas {
+public class ExcecoesEncadeadas {
     public static void main(String[] args) {
         try {
             method1();

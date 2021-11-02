@@ -1,5 +1,5 @@
 
-package cap8_Class.Composição;
+package cap8_Class.Composicao;
 
 public class Employee {
     private String firstName;

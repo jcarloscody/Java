@@ -1,7 +1,6 @@
 package cap11_TratamentoDeExcecao;
 
 import java.util.Scanner;
-
 /**
  * Ao implementar e depurar uma classe, às vezes é útil declarar as condições
  * que devem ser verdadeiras em um ponto particular de um método. Essas
@@ -16,6 +15,8 @@ import java.util.Scanner;
  * programaticamente. A instrução assert avalia uma expressão boolean e, se
  * false, lança um AssertionError (uma subclasse de Error).
  */
+
+
 
 public class Assertivas {
     public static void main(String[] args) {

@@ -77,7 +77,7 @@ public class LabelFrame extends JFrame {
          * construtor ImageIcon utiliza o URL para localizar a imagem e, em seguida,
          * carrega essa imagem na memória.
          */
-        // label1.setText("josue");
+        // label1.setText("josue - dei um set");
 
         label2 = new JLabel("Label with text and icon", bug, SwingConstants.LEFT);
         /**

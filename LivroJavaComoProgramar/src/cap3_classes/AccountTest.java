@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package cap3_classes;
 
 import java.util.Scanner;
@@ -26,9 +22,9 @@ public class AccountTest {
         * as variáveis de instância com o valor null.
        */
         
-        System.out.println(objetoClasseAccount.getName()); // executando o método da classe do objeto
+       // System.out.println(objetoClasseAccount.getName()); // executando o método da classe do objeto
         
-        System.out.println("");
+        //System.out.println("");
         
         System.out.println("Digite uma saudação: ");
         String saudacao = leia.nextLine();

@@ -7,7 +7,7 @@ public class AccountTest {
     public static void main(String[] args) {
         
 
-        cap3_classes.banco.Account Objeto_conta = new cap3_classes.banco.Account("",0);
+        Account Objeto_conta = new Account("",0);
         
         String nome = JOptionPane.showInputDialog("Digite o seu nome: ");
         
