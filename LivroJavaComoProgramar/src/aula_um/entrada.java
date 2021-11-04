@@ -39,11 +39,11 @@ public class entrada {
     // CAIXA DE DIÁLOGO - JoptionPane
     // é uma classe do pct java.swing
 
-    String nome_Jop;
+    //String nome_Jop;
 
-    nome_Jop = JOptionPane.showInputDialog("Digite o seu nome:");
+    //nome_Jop = JOptionPane.showInputDialog("Digite o seu nome:");
 
-    JOptionPane.showMessageDialog(null, nome_Jop);
+    //JOptionPane.showMessageDialog(null, nome_Jop);
 
     Scanner sc_input = new Scanner(System.in); // É uma instrução que declara
     // uma variável com nome input e diz o tipo Scanner. esta classe permite ler
@@ -52,6 +52,7 @@ public class entrada {
 
     // variáveis
     float n1, n2, n3;
+    String no;
     // são variáveis não inicializadas.
     // int, float, double, char, boolean
 
@@ -65,8 +66,8 @@ public class entrada {
     // chamando este método.
     // se fosse só -> next() -> iria ler apenas os caracteres da primeira palavra e
     // ignorar os espaços
-
-    System.out.println("Digite o 2º número");
+    no = sc_input.nextLine();
+    System.out.println("Digite o 2º número" );
     n2 = sc_input.nextFloat();
 
     n3 = n1 + n2;
