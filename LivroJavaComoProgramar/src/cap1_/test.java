@@ -1,4 +1,4 @@
-package aula_um;
+package cap1_;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -23,7 +23,8 @@ public class test {
 
         System.out.println(nome + n2);
 
-
+        tipos_dados.a = 12;
+        System.out.println(tipos_dados.a);
 
     }
 

@@ -6,7 +6,7 @@
 %
 
  */
-package aula_um;
+package cap1_;
 import java.util.Scanner;
 
 /**

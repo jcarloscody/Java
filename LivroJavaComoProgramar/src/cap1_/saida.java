@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aula_um;
+package cap1_;
 
 /**
  *
@@ -20,7 +20,7 @@ public class saida {
        // %f - float
          //       %c - char
                 
-        
+        System.out.println(tipos_dados.a);
     }
     
 }

@@ -5,11 +5,12 @@
  * @última data de modificação: 04/01/2021
  */
 
-package aula_um;
+package cap1_;
 
 /**
  * Classes privadas só poderão ser visualizadas dentro de seu próprio pacote
- * enquanto as públicas serão acessíveis por qualquer classe de qualquer pacote.
+ * enquanto as 
+ * públicas serão acessíveis por qualquer classe de qualquer pacote.
  * Se o qualificador for omitido, a classe será privada por padrão.
  */
 public class introd { // declaração de classe

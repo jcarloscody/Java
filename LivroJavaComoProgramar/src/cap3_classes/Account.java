@@ -7,7 +7,7 @@ package cap3_classes;
  *                      elementos só serão configurados, acessível a métodos da
  *                      classe proprietaria.
  */
-public class Account {// A classe Account não pode executar por si só porque não contém um método main
+class Account {// A classe Account não pode executar por si só porque não contém um método main
 
     private String sadu;
     private String name; // variável de instância - Variáveis de instância de uma classe armazenam dados

@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package aula_um;
+
+package cap1_;
 
 import java.io.IOException;
 import java.util.Scanner; //aqui será usada a classe scanner
@@ -39,11 +35,11 @@ public class entrada {
     // CAIXA DE DIÁLOGO - JoptionPane
     // é uma classe do pct java.swing
 
-    //String nome_Jop;
+    String nome_Jop;
 
-    //nome_Jop = JOptionPane.showInputDialog("Digite o seu nome:");
+    nome_Jop = JOptionPane.showInputDialog("Digite o seu nome:");
 
-    //JOptionPane.showMessageDialog(null, nome_Jop);
+    JOptionPane.showMessageDialog(null, nome_Jop);
 
     Scanner sc_input = new Scanner(System.in); // É uma instrução que declara
     // uma variável com nome input e diz o tipo Scanner. esta classe permite ler

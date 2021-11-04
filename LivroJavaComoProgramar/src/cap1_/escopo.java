@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aula_um;
+package cap1_;
 
 import java.util.Scanner;
 
@@ -35,16 +35,15 @@ public class escopo {
 //continue a solucao de acordo com o solicitado no enunciado
 
         while (cont < 6 ) {
-          double x = leitor.nextDouble();
-          
-        	if ( x > 0 ) {
-        		positivo ++ ;
-        	}
-    		cont ++ ;
+            double x = leitor.nextDouble();
+            if ( x > 0 ) {
+                positivo ++ ;
+            }
+            cont ++ ;
         }
         
         System.out.println(  positivo + " valores positivos"   );
     }
-    }
+}
     
 
