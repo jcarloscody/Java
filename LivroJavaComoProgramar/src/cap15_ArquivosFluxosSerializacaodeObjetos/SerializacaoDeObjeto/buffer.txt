@@ -1,0 +1,24 @@
+Fluxos armazenados em buffer
+Armazenamento em buffer (buffering) é uma técnica de aprimoramento do desempenho de E/S. Com um BufferedOutputStream (uma subclasse de FilterOutputStream), cada instrução de saída não necessariamente resulta em uma transferência
+física real de dados para o dispositivo de saída (uma operação lenta se comparada com as velocidades do processador e da memória
+principal). Em vez disso, cada operação de saída é dirigida para uma região na memória chamada buffer, que é grande o suficiente
+para armazenar os dados de muitas operações de saída. Então, a transferência real para o dispositivo de saída é realizada em uma
+grande operação física de saída toda vez que o buffer se enche. As operações de saída voltadas para o buffer de saída na memória
+são com frequência chamadas operações lógicas de saída. Com um BufferedOutputStream, um buffer parcialmente preenchido
+pode ser forçado a ir para o dispositivo a qualquer momento invocando o método flush do objeto de fluxo.
+Utilizar o armazenamento em buffer pode aumentar de maneira significativa o desempenho de um aplicativo. Operações típicas
+de E/S são extremamente lentas se comparadas à velocidade de acesso aos dados na memória do computador. O armazenamento
+em buffer reduz o número de operações de E/S ao combinar primeiro saídas menores na memória. O número de operações físicas
+reais de E/S é pequeno se comparado ao número de solicitações de E/S emitidas pelo programa. Portanto, o programa que utiliza
+armazenamento em buffer é mais eficiente.
+Com um BufferedInputStream (uma subclasse de FilterInputStream), muitos fragmentos ou trechos “lógicos” de dados
+de um arquivo são lidos como uma grande operação física de entrada em um buffer de memória. À medida que o programa solicita
+novos fragmentos de dados, eles são selecionados do buffer. (Esse procedimento é às vezes chamado de operação lógica de entrada.)
+Quando o buffer está vazio, a próxima operação física real de entrada do dispositivo de entrada é realizada para ler (read) o próximo
+grupo de trechos “lógicos” de dados. Portanto, o número de operações físicas reais de entrada é pequeno comparado com o número
+de solicitações de leitura emitido pelo programa.
+
+
+
+Dica de desempenho 15.1
+E/S armazenada em buffer produz melhorias significativas de desempenho em relação a E/S não armazenada em buffer
