@@ -1,0 +1,21 @@
+
+Uma List (às vezes chamada de sequência) é uma Collection ordenada que pode conter elementos duplicados. Como 
+os arrays, índices de List são baseados em zero (isto é, o índice do primeiro elemento é zero). Além dos métodos herdados de 
+Collection, List fornece métodos para manipular elementos por meio de seus índices, manipular um intervalo especificado de 
+elementos, procurar elementos e obter um ListIterator para acessar os elementos.
+
+A interface List é implementada por várias classes, inclusive as classes ArrayList, LinkedList e Vector. O autoboxing 
+ocorre quando você adiciona valores de tipo primitivo a objetos dessas classes, porque eles armazenam apenas referências a objetos. 
+As classes ArrayList e Vector são implementações de arrays redimensionáveis de List. Inserir um elemento entre os elementos 
+existentes de um ArrayList ou Vector é uma operação ineficiente — todos os elementos depois do novo devem ser removidos, o 
+que pode ser uma operação cara em uma coleção com um grande número de elementos. Uma LinkedList permite a inserção (ou 
+remoção) eficiente dos elementos no meio de uma coleção, mas é muito menos eficiente que um ArrayList para pular para um 
+elemento específico na coleção. Discutiremos a arquitetura das listas vinculadas no Capítulo 21.
+
+ArrayList e Vector têm comportamentos praticamente idênticos. Operações em Vectors são sincronizadas por padrão, enquanto aquelas em ArrayLists não o são. Além disso, a classe Vector é do Java 1.0, antes de a estrutura de coleções ser adicionada 
+ao Java. Assim, Vector tem alguns métodos que não fazem parte da interface List e não são implementados na classe ArrayList. 
+Por exemplo, os métodos Vector addElement e add acrescentam um elemento a um Vector, mas somente o método add é especificado na interface List e implementado por ArrayList. As coleções não sincronizadas fornecem melhor desempenho que as 
+sincronizadas. Por essa razão, ArrayList em geral é preferida a Vector em programas que não compartilham uma coleção entre 
+threads. Separadamente, a API das coleções Java fornece empacotadores de sincronização (Seção 16.13) que podem ser usados 
+para adicionar sincronização às coleções não sincronizadas, e várias coleções sincronizadas poderosas estão disponíveis nas APIs de 
+concorrência do Java.
