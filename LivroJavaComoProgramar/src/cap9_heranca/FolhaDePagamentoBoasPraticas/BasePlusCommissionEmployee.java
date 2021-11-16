@@ -1,6 +1,4 @@
-// A classe BasePlusCommissionEmployee é herdada de CommissionEmployee
-// e acessa os dados private da superclasse via
-// métodos public herdados.
+// A classe BasePlusCommissionEmployee é herdada de CommissionEmployee  e acessa os dados private da superclasse via métodos public herdados.
 package cap9_heranca.FolhaDePagamentoBoasPraticas;
 
 public class BasePlusCommissionEmployee extends ComissionEmployee {

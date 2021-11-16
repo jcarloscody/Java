@@ -21,6 +21,7 @@ public class EnumTest {
         }
 
         System.out.printf("%nDisplay a range of enum constants:%n");
+        System.out.println(Book.CHTP.getTitle());
 
         // imprime os primeiros quatro livros
         for (Book book : EnumSet.range(Book.JHTP,  Book.CPPHTP))
