@@ -22,8 +22,8 @@ public class MethodsArray {
 
          // copia array intArray em array intArrayCopy
         int[] intArray = { 1, 2, 3, 4, 5, 6 };
-        int[] intArrayCopy = new int[intArray.length];
-        System.arraycopy(intArray, 0, intArrayCopy, 0, intArray.length);
+        int[] intArrayCopy = new int[4];
+        System.arraycopy(intArray, 0, intArrayCopy, 0, 2);
         displayArray(intArray, "intArray");
         displayArray(intArrayCopy, "intArrayCopy");
 

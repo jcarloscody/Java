@@ -4,7 +4,9 @@ package cap7_Array;
 
 public class argsLinhadeComando {
     public static void main(String[] args){
-
+        for (int i = 0; i < args.length; i++) {
+            System.out.println(args[i]);
+        }
         // verifica número de argumentos de linha de comando
         if (args.length != 3){
             System.out.printf("Error: Please re-enter the entire command, including%n" +

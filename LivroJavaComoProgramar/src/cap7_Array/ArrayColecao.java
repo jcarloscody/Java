@@ -35,8 +35,7 @@ public class ArrayColecao {
         display(items, "Remove second list element (green):");
 
          // verifica se um valor está na List
-        System.out.printf("\"red\" is %sin the list%n",
-                items.contains("red") ? "": "not ");
+        System.out.printf("\"red\" is %s in the list%n", items.contains("red") ? "": "not ");
 
         // exibe o número de elementos na List
         System.out.printf("Size: %s%n", items.size());
@@ -48,7 +47,7 @@ public class ArrayColecao {
 
         // exibe cada elemento em itens
         for (String item : items)
-        System.out.printf(" %s", item);
+            System.out.printf(" %s", item);
 
         System.out.println();
     }

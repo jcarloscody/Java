@@ -14,7 +14,7 @@ public class ForAprimorado {
         // adiciona o valor de cada elemento ao totalÿ
         for (int number : array) {
             total += number;
-            System.out.println(number);
+            System.out.println(total);
         }
         
 
