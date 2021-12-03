@@ -13,7 +13,7 @@ public class BasePlusCommissionEmployee extends ComissionEmployee {
          * de CommissionEmployee, mas o invoca explicitamente Para inicializar as
          * variáveis de instância que ela herdou da segunda
          * 
-         * . O construtor BasePlusCommissionEmployee deve chamar explicitamente o
+         * O construtor BasePlusCommissionEmployee deve chamar explicitamente o
          * construtor de CommissionEmployee, porque esta não tem um construtor sem
          * argumentos que possa ser chamado implicitamente.
          */

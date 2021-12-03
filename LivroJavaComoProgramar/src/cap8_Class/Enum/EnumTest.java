@@ -22,11 +22,13 @@ public class EnumTest {
 
         System.out.printf("%nDisplay a range of enum constants:%n");
         System.out.println(Book.CHTP.getTitle());
-
+        System.out.println(Book.CHTP);
+        Book uf = Book.CHTP;
+        System.out.println(uf.getTitle());
+        
         // imprime os primeiros quatro livros
         for (Book book : EnumSet.range(Book.JHTP,  Book.CPPHTP))
-        System.out.printf("%-10s%-45s%s%n", book,
-        book.getTitle(),book.getCopyrightYear());
+            System.out.printf("%-10s%-45s%s%n", book, book.getTitle(),book.getCopyrightYear());
 }
     
 }

@@ -6,7 +6,7 @@ public class BasePlusCommissionEmployeeTest{
     public static void main(String[] args){
         // instancia o objeto BasePlusCommissionEmployee
         BasePlusCommissionEmployee employee = new BasePlusCommissionEmployee( 
-        "Bob", "Lewis", "333-33-3333", 5000, .04, 300);
+        "Bob", "Lewis", "333-33-3333", 1, .04, 300);
 
         // obtém os dados do empregado comissionado com salário-base
         System.out.println("Employee information obtained by get methods:%n");

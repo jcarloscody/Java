@@ -116,6 +116,7 @@ os dados e métodos do segundo objeto (incluindo aqueles que são private).*/
     }
 
     // converte em String no formato padrão de data/hora (H:MM:SS AM ou PM)
+    @Override
     public String toString(){
         return String.format("%d:%02d:%02d %s",
             ((getHour() == 0 || getHour() == 12) ? 12 : getHour() % 12),
