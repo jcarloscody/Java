@@ -1,0 +1,7 @@
+Este capítulo mostra como construir estruturas de dados dinâmicas que crescem e encolhem em tempo de execução. As listas
+encadeadas são coleções de itens de dados “vinculados em uma cadeia” — as inserções e exclusões podem ser feitas em qualquer
+lugar de uma lista encadeada. As pilhas são importantes em compiladores e sistemas operacionais; as inserções e as exclusões são
+feitas somente no final de uma pilha — sua parte superior. As filas representam filas de espera; as inserções são feitas na parte de
+trás (também referida como cauda) de uma fila e as exclusões são feitas na parte da frente da fila (também referida como cabeça).
+As árvores binárias facilitam a pesquisa e classificação de dados em alta velocidade, a eliminação eficiente de itens de dados duplicados, a representação de diretórios de sistema de arquivos, a compilação de expressões em linguagem de máquina e muitas outras
+aplicações interessantes.
