@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.livrojavalambda.cap2;
+package cap2.loops;
 
 
 import java.util.Arrays;
@@ -14,7 +14,7 @@ import java.util.function.Consumer;
  *
  * @author developer
  */
-public class TestCap2 {
+public class Test {
     public static void main(String ... args) {
         Usuario user1 = new Usuario("Paulo Silveira", 150);
         Usuario user2 = new Usuario("Rodrigo Turini", 120);

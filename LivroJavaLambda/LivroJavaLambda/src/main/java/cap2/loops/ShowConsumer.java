@@ -4,7 +4,7 @@ trivial, possuindo o único método accept responsável por pegar um objeto do t
 Usuario e consumi-lo. ‘Consumir’ aqui é realizar alguma tarefa que faça sentido
 pra você.
  */
-package com.mycompany.livrojavalambda.cap2;
+package cap2.loops;
 
 import java.util.function.Consumer;
 
@@ -18,5 +18,6 @@ public class ShowConsumer implements Consumer<Usuario>{
     public void accept(Usuario t) {
         System.out.println(t.getNome());
     }
-    
+
+
 }
