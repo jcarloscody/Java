@@ -1,0 +1,12 @@
+Listas, pilhas e filas são estruturas de dados lineares (isto é, sequências). Uma árvore é uma estrutura de dados bidimensional,
+não linear, com propriedades especiais. Os nós da árvore contêm dois ou mais links. Esta seção discute as árvores binárias (Figura
+21.15) — árvores cujos nós contêm, cada um, dois links (nenhum, um ou ambos os quais podem ser null). O nó raiz é o primeiro
+nó em uma árvore. Cada link no nó raiz referencia um filho. O filho esquerdo é o primeiro nó na subárvore esquerda (também
+conhecido como o nó raiz da subárvore esquerda) e o filho direito é o primeiro nó na subárvore direita (também conhecido como
+o nó raiz da subárvore direita). Os filhos de um nó específico são chamados irmãos. Um nó sem filhos é chamado nó de folha. Os
+cientistas da computação normalmente desenham árvores indo do nó raiz para baixo — o oposto da maneira como a maioria das
+árvores cresce na natureza.
+Em nosso exemplo, criamos uma árvore binária especial chamada árvore de pesquisa binária. Uma árvore de pesquisa binária
+(sem valores de nó duplicados) tem a característica de que os valores em qualquer subárvore esquerda são menores que o valor no
+nó pai dessa subárvore e os valores em qualquer subárvore direita são maiores que o valor no nó pai dessa subárvore. A Figura 21.16
+ilustra uma árvore de pesquisa binária com 12 valores de inteiro. A forma da árvore de pesquisa binária que corresponde a um conjunto de dados pode variar, dependendo da ordem em que os valores são inseridos na árvore.

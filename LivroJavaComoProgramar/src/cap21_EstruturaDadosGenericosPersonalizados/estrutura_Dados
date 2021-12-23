@@ -3,5 +3,20 @@ encadeadas são coleções de itens de dados “vinculados em uma cadeia” — 
 lugar de uma lista encadeada. As pilhas são importantes em compiladores e sistemas operacionais; as inserções e as exclusões são
 feitas somente no final de uma pilha — sua parte superior. As filas representam filas de espera; as inserções são feitas na parte de
 trás (também referida como cauda) de uma fila e as exclusões são feitas na parte da frente da fila (também referida como cabeça).
-As árvores binárias facilitam a pesquisa e classificação de dados em alta velocidade, a eliminação eficiente de itens de dados duplicados, a representação de diretórios de sistema de arquivos, a compilação de expressões em linguagem de máquina e muitas outras
+As árvores binárias facilitam a pesquisa e classificação de dados em alta velocidade, a eliminação eficiente de itens de dados duplicados, 
+a representação de diretórios de sistema de arquivos, a compilação de expressões em linguagem de máquina e muitas outras
 aplicações interessantes.
+
+
+
+Alocação dinâmica de memória
+Criar e manter estruturas de dados dinâmicas requer alocação dinâmica de memória — permissão para que um programa
+obtenha mais espaço de memória em tempo de execução para armazenar novos nós e liberar espaço não mais necessário. Lembre-se
+de que o Java não exige que você libere explicitamente a memória alocada dinamicamente. Em vez disso, o Java realiza coleta de lixo
+automática de objetos que não são mais referenciados em um programa.
+O limite para alocação dinâmica de memória pode ser tão grande quanto a quantidade de memória física disponível no computador ou a 
+quantidade de espaço em disco disponível em um sistema de memória virtual. Frequentemente, os limites são muito
+menores, porque a memória disponível do computador deve ser compartilhada entre muitos aplicativos.
+
+
+

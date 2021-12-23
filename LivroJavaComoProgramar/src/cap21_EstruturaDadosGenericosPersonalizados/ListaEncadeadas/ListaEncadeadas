@@ -1,0 +1,39 @@
+
+Uma lista encadeada é uma coleção linear (isto é, uma sequência) de objetos de classe autorreferencial, 
+chamados nós, conectados por links de referência — daí o termo lista “encadeada”.
+
+Por convenção, a referência de link no último nó da lista é definida como null para indicar o “fim da lista”. 
+
+Os dados são armazenados e removidos das listas encadeadas dinamicamente — o programa cria e exclui os nós como necessário
+
+As pilhas e filas são estruturas de dados também lineares e, como veremos, são versões limitadas de listas 
+encadeadas. As árvores são estruturas de dados não lineares.
+
+Uma lista encadeada é apropriada quando o número de elementos de dados a ser representado na estrutura de dados 
+é imprevisível. Listas encadeadas são dinâmicas, assim o comprimento de uma lista pode aumentar ou diminuir como
+necessário,enquanto o tamanho de um array Java convencional não pode ser alterado — ele é fixo quando o programa 
+cria o array. [Naturalmente, ArrayLists podem crescer e encolher.] Os arrays convencionais podem tornar-se 
+cheios. As listas encadeadas tornam-se cheias apenas quando o sistema tem memória insuficiente para satisfazer 
+solicitações de alocação de armazenamento dinâmico. O pacote java.util contém a classe LinkedList (discutida no 
+Capítulo 16) para implementar e manipular listas encadeadas que crescem e encolhem durante a execução de programa
+
+As listas encadeadas podem ser mantidas em ordem de classificação simplesmente inserindo cada novo elemento no ponto
+adequado na lista. (Naturalmente, leva tempo para localizar o ponto de inserção adequado.) Os elementos existentes da lista não
+precisam ser movidos.
+
+A inserção e a exclusão em um array classificado podem consumir muito tempo — todos os elementos que se seguem ao elemento
+inserido ou excluído devem ser deslocados apropriadamente.
+
+
+
+
+Listas encadeadas individualmente -----
+Nós de lista encadeada normalmente não são armazenados contiguamente na memória. Em vez disso, são logicamente 
+contíguos
+Cada nó contém uma referência ao próximo nó da lista. 
+Em geral, as listas encadeadas são implementadas como listas duplamente encadeadas — cada nó contém uma 
+referência ao próximo nó na lista e uma referência ao anterior.
+
+Os elementos de um array são contíguos na memória. Isso permite acesso imediato a qualquer elemento do array, porque seu endereço pode ser calculado diretamente como seu deslocamento a partir do início do array. As listas encadeadas não têm recursos para
+tal acesso imediato — um elemento só pode ser acessado percorrendo a lista da parte da frente (ou de trás em uma lista duplamente
+encadeada).

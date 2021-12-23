@@ -1,0 +1,11 @@
+Outra estrutura de dados comumente utilizada é a fila. Uma fila é semelhante a uma fila de caixa de um supermercado — o caixa
+atende a pessoa no início da fila primeiro. Outros clientes entram no final da fila e esperam ser atendidos. Os nós de fila são removidos
+apenas a partir da cabeça (ou no início) da fila e são inseridos apenas na cauda (ou no final). Por essa razão, uma fila é uma estrutura de dados primeiro a entrar, primeiro a sair (first-in, first-out — FIFO). As operações de inserção e remoção são conhecidas como
+enqueue e dequeue.
+As filas têm muitas utilizações em sistemas de computador. Cada CPU em um computador pode atender um único aplicativo por
+vez. Todo aplicativo que requer tempo de processador é colocado em uma fila. O aplicativo na frente da fila é o próximo a receber o
+serviço. Cada aplicativo avança gradualmente para a frente à medida que os aplicativos antes dele recebem o serviço.
+As filas também são utilizadas para suportar spooling de impressão. Por exemplo, uma única impressora talvez seja compartilhada
+por todos os usuários de uma rede. Muitos usuários podem enviar trabalhos de impressão à impressora, mesmo quando a impressora
+já estiver ocupada. Esses trabalhos de impressão são colocados em uma fila até a impressora ficar disponível. Um programa chamado
+spooler gerencia a fila para assegurar que, à medida que cada trabalho de impressão é concluído, o próximo seja enviado à impressora.

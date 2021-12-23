@@ -1,0 +1,21 @@
+
+Uma pilha é uma versão limitada de uma lista — novos nós podem ser inseridos e removidos de uma pilha apenas na parte
+superior. Por essa razão, uma pilha é referida como uma estrutura de dados último a entrar, primeiro a sair (last-in, first-out —
+LIFO). O elemento link no nó inferior é definido como null para indicar a parte inferior da pilha. Não é necessário implementar
+uma pilha como uma lista encadeada — a pilha também pode ser implementada utilizando um array
+
+Os métodos primários para manipular uma pilha são push e pop, que adicionam um novo nó ao topo da pilha e removem um
+nó do topo da pilha, respectivamente. O método pop também retorna os dados do nó removido.
+As pilhas têm muitas aplicações interessantes. Por exemplo, quando um programa chama um método, o método chamado deve
+saber retornar ao seu chamador, assim o endereço de retorno do método chamador é inserido na pilha de execução do programa
+(discutido na Seção 6.6). Se uma série de chamadas de método ocorre, os sucessivos endereços de retorno são empilhados na ordem
+último a entrar, primeiro a sair, de modo que cada método possa retornar para seu chamador. As pilhas suportam as chamadas de
+método recursivo da mesma maneira que as chamadas de método não recursivo convencionais.
+
+
+
+
+Nesta seção, tiramos vantagem do relacionamento íntimo entre listas e pilhas para implementar uma classe de pilha reutilizando a classe List<T> da Figura 21.3. Demonstramos duas formas diferentes de reutilização. Primeiro, implementaremos a classe de
+pilha estendendo a classe List. Então, implementaremos uma classe de pilha que tem o mesmo desempenho por meio de composição, incluindo uma referência a um objeto List como uma variável de instância private. As estruturas de dados de lista, pilha e
+fila neste capítulo são implementadas para armazenar referências a objetos de qualquer tipo a fim de encorajar mais capacidade de
+reutilização.
