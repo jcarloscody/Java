@@ -9,6 +9,7 @@ public class execucao {
         
         System.out.println(cachorro.getModoOperante());
         
+        Cachorro.nome = "lk";
        
     }
 }

@@ -2,6 +2,7 @@ package Treinamento;
 
 public class Cachorro extends Animal{
     private String modoOperante; //caracteristica 
+    public static String nome;
     
     public Cachorro(String modoOperante){
         this.modoOperante = modoOperante;
