@@ -15,19 +15,33 @@ import org.springframework.web.bind.annotation.RestController;
 public class VendasApplication {
 
     @Bean
-    public CommandLineRunner init( @Autowired Clientes clientesEntityManager){
+    public CommandLineRunner init( @Autowired Clientes clientes){
         return args -> {
-            System.out.println("SALVANDO COM JPA ...");
-            clientesEntityManager.salvar(new Cliente("josue"));
-            clientesEntityManager.salvar(new Cliente("marcos"));
-            clientesEntityManager.salvar(new Cliente("silveira"));
+            System.out.println("SALVANDO COM JpaRepositoruy ...");
+            clientes.save(new Cliente("josue"));
+            clientes.save(new Cliente("marcos"));
+            clientes.save(new Cliente("silveira"));
 
-            System.out.println("BUSCANDO TODOS COM JPA ...");
-            clientesEntityManager.buscarTodos().forEach(System.out::println);
+            System.out.println("BUSCANDO TODOS COM JpaRepositoruy ...");
+            clientes.findAll().forEach(System.out::println);
 
-            System.out.println("DELETANDO TODOS TODOS COM JPA ...");
-            clientesEntityManager.buscarTodos().forEach(cliente -> {
-                clientesEntityManager.deletar(cliente);
+            System.out.println("ATUALIZANDO TODOS COM JpaRepositoruy ...");
+            clientes.findAll().forEach(c -> {
+                c.setNome(c.getNome() + "Atualizando teste");
+                clientes.save(c);
+            });
+
+
+
+            System.out.println("BUSCANDO APOS ATUALIZACAO ...");
+            clientes.findAll().forEach(System.out::println);
+
+            System.out.println("PESQUISA POR NOME ...  fazendo metodo proprio");
+            clientes.findByNomeLike("josue").forEach(System.out::println);
+
+            System.out.println("DELETANDO TODOS TODOS COM JpaRepositoruy ...");
+            clientes.findAll().forEach(cliente -> {
+                clientes.delete(cliente);
             });
 
         };
