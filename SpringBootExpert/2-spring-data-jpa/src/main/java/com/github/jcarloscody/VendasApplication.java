@@ -22,12 +22,14 @@ public class VendasApplication {
             clientes.save(new Cliente("marcos"));
             clientes.save(new Cliente("silveira"));
 
+
+
             System.out.println("BUSCANDO TODOS COM JpaRepositoruy ...");
             clientes.findAll().forEach(System.out::println);
 
             System.out.println("ATUALIZANDO TODOS COM JpaRepositoruy ...");
             clientes.findAll().forEach(c -> {
-                c.setNome(c.getNome() + "Atualizando teste");
+                c.setNome(c.getNome() + " Atualizando teste");
                 clientes.save(c);
             });
 
@@ -36,8 +38,10 @@ public class VendasApplication {
             System.out.println("BUSCANDO APOS ATUALIZACAO ...");
             clientes.findAll().forEach(System.out::println);
 
-            System.out.println("PESQUISA POR NOME ...  fazendo metodo proprio");
+            System.out.println("PESQUISA...  fazendo metodo proprio");
             clientes.findByNomeLike("josue").forEach(System.out::println);
+            System.out.println(clientes.findOneByNome("josue"));
+            clientes.findByNomeOrId("josue", 2).forEach(System.out::println);
 
             System.out.println("DELETANDO TODOS TODOS COM JpaRepositoruy ...");
             clientes.findAll().forEach(cliente -> {
