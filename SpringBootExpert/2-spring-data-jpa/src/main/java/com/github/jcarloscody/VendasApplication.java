@@ -21,8 +21,7 @@ public class VendasApplication {
             clientes.save(new Cliente("josue"));
             clientes.save(new Cliente("marcos"));
             clientes.save(new Cliente("silveira"));
-
-
+            clientes.procurarPorNome("%su%").forEach(System.out::println);
 
             System.out.println("BUSCANDO TODOS COM JpaRepositoruy ...");
             clientes.findAll().forEach(System.out::println);
@@ -39,7 +38,8 @@ public class VendasApplication {
             clientes.findAll().forEach(System.out::println);
 
             System.out.println("PESQUISA...  fazendo metodo proprio");
-            clientes.findByNomeLike("josue").forEach(System.out::println);
+            System.out.println("AQUIIIIIIIIIIIIIII:::::  " + clientes.findOneByNomeLike("os"));
+
             System.out.println(clientes.findOneByNome("josue"));
             clientes.findByNomeOrId("josue", 2).forEach(System.out::println);
 

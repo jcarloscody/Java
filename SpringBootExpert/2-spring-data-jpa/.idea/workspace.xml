@@ -17,6 +17,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/entity/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/entity/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/repositorio/Clientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/repositorio/Clientes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/repositorio/Clientes_jdbcTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
