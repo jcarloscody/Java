@@ -3,7 +3,7 @@ package com.github.jcarloscody;
 
 import com.github.jcarloscody.domain.entity.Cliente;
 import com.github.jcarloscody.domain.repositorio.Clientes_jdbcTemplate;
-import com.github.jcarloscody.domain.repositorio.ClientesEntityManager;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -16,21 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class VendasApplication {
 
     @Bean
-    public CommandLineRunner init(@Autowired Clientes_jdbcTemplate clientesJdbcTemplate, @Autowired ClientesEntityManager clientesEntityManager){
+    public CommandLineRunner init(@Autowired Clientes_jdbcTemplate clientesJdbcTemplate){
         return args -> {
-           /* clientesEntityManager.salvar(new Cliente("josue"));
-            clientesEntityManager.salvar(new Cliente("marcos"));
-            clientesEntityManager.salvar(new Cliente("silveira"));
-
-            clientesEntityManager.buscarTodos().forEach(cliente -> {
-                clientesEntityManager.deletar(cliente);
-            });
-
-            */ //TRABALHANDO COM JDBCTEMPLATE  precisa do data.sql no resources & não se usa o JPA nas classes de entidades
-                //o Spring tem a capacidade de trabalhar com ele tbm
-
-            clientesJdbcTemplate.salvar(new Cliente("josue"));
-            clientesJdbcTemplate.salvar(new Cliente("Carlos"));
+            System.out.println("SALVANDO OBJETOS...");
+            clientesJdbcTemplate.salvar(new Cliente("lUCAS os"));
+            clientesJdbcTemplate.salvar(new Cliente("mEREILES"));
 
             System.out.println("MOSTRANDO TODOS");
             clientesJdbcTemplate.obterTodos().forEach(c -> {
@@ -39,12 +29,27 @@ public class VendasApplication {
             //OU
              clientesJdbcTemplate.obterTodos().forEach(System.out::println);
 
+            System.out.println("Pesquisando por nome os");
+            clientesJdbcTemplate.buscarNome("os").forEach(System.out::println);
+
+
+            System.out.println("ATUALIZANDO");
+            clientesJdbcTemplate.obterTodos().forEach( c-> {
+                    c.setNome(c.getNome() + "nome atualizado test");
+                    clientesJdbcTemplate.atualizar(c);
+            }
+            );
+
+            System.out.println("MOSTRANDO TODOS - apos atualizacao");
+            clientesJdbcTemplate.obterTodos().forEach(System.out::println);
+
+
             System.out.println("DELETANDO TODOS");
             clientesJdbcTemplate.obterTodos().forEach(c -> {
                 clientesJdbcTemplate.deletar(c);
             });
 
-            clientesJdbcTemplate.buscarNome("os").forEach(System.out::println);
+
 
 
             System.out.println("DELETANDO TODOS");

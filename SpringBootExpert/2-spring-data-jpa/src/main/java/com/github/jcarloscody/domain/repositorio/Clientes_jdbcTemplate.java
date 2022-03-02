@@ -6,13 +6,12 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
 @Repository
-public class Clientes {
+public class Clientes_jdbcTemplate {
 
     private  static  String INSERT = "INSERT INTO cliente (nome) VALUES (?)";
     private static String SELECT_ALL = "SELECT * FROM cliente";
