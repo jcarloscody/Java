@@ -13,9 +13,9 @@ import java.util.List;
 public class Clientes {
 
     @Autowired
-    private EntityManager entityManager;
+    private EntityManager entityManager; //a interface entitymanager vai fazer toda as operacoes da base com aas entidades. temos as entidades mapeadas, e em cima disso faz as operacoes.
 
-    @Transactional
+    @Transactional  //precisamos anotar os metodos com isto, ele precisa de uma transacao para fazer as operacoes
     public Cliente salvar(Cliente cliente){
         entityManager.persist(cliente);
         return cliente;

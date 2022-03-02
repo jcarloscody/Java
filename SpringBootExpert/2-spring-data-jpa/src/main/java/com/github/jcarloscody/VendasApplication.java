@@ -1,6 +1,7 @@
 package com.github.jcarloscody;
 
 
+import com.github.jcarloscody.domain.entity.Cliente;
 import com.github.jcarloscody.domain.repositorio.Clientes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -16,10 +17,11 @@ public class VendasApplication {
     @Bean
     public CommandLineRunner init( @Autowired Clientes clientesEntityManager){
         return args -> {
-           /* clientesEntityManager.salvar(new Cliente("josue"));
+            System.out.println("SALVANDO COM JPA ...");
+            clientesEntityManager.salvar(new Cliente("josue"));
             clientesEntityManager.salvar(new Cliente("marcos"));
             clientesEntityManager.salvar(new Cliente("silveira"));
-
+/*
             clientesEntityManager.buscarTodos().forEach(cliente -> {
                 clientesEntityManager.deletar(cliente);
             });
