@@ -2,16 +2,16 @@ package com.github.jcarloscody.domain.entity;
 
 import javax.persistence.*;
 
-//@Entity
-//@Table(name = "cliente")
+@Entity  //mapeando com a especificao jpa
+@Table(name = "cliente")  //nao é obrigatorio usar, a mesnos que o nome no banco seja diferente. pode usar o parametro shema=""
 public class Cliente {
 
-   // @Id
-   // @GeneratedValue(strategy = GenerationType.AUTO )
-   // @Column(name = "id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO )
+    @Column(name = "id") //funciona no msmo raciocinio do @table. pode adicionar outras propriedade tbm
     private  Integer id;
 
-    //@Column(length = 100)
+    @Column(length = 100)
     private  String nome;
 
     public Cliente() {

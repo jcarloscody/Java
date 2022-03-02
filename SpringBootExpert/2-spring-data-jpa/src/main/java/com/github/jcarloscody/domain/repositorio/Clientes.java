@@ -1,6 +1,5 @@
 package com.github.jcarloscody.domain.repositorio;
 
-import ch.qos.logback.core.net.server.Client;
 import com.github.jcarloscody.domain.entity.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -11,7 +10,7 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
-public class ClientesEntityManager {
+public class Clientes {
 
     @Autowired
     private EntityManager entityManager;
