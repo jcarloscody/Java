@@ -21,13 +21,15 @@ public class VendasApplication {
             clientesEntityManager.salvar(new Cliente("josue"));
             clientesEntityManager.salvar(new Cliente("marcos"));
             clientesEntityManager.salvar(new Cliente("silveira"));
-/*
+
+            System.out.println("BUSCANDO TODOS COM JPA ...");
+            clientesEntityManager.buscarTodos().forEach(System.out::println);
+
+            System.out.println("DELETANDO TODOS TODOS COM JPA ...");
             clientesEntityManager.buscarTodos().forEach(cliente -> {
                 clientesEntityManager.deletar(cliente);
             });
 
-            */ //TRABALHANDO COM JDBCTEMPLATE  precisa do data.sql no resources & não se usa o JPA nas classes de entidades
-                //o Spring tem a capacidade de trabalhar com ele tbm
         };
     }
 
