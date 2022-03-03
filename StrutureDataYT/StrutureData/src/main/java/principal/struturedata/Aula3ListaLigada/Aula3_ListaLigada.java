@@ -1,5 +1,5 @@
 
-package principal.struturedata.Aula3;
+package principal.struturedata.Aula3ListaLigada;
 
 /**
  *
@@ -28,6 +28,26 @@ public class Aula3_ListaLigada {
         System.out.println(lista.get(1).getValor());
         System.out.println(lista.get(2).getValor());
         System.out.println(lista.get(3).getValor());
+        
+        for(int i=0; i < lista.getTamanho(); i++){
+            System.out.println(lista.get(i).getValor());
+        }
+        
+        //remover estado DF
+        lista.remover("DF");
+        System.out.println("Removeu estado DF");
+        lista.adicionar("SP");
+        System.out.println("Adicionou estado SP");
+        lista.remover("BA");
+        lista.remover("CE");
+        lista.remover("AC");
+        lista.remover("SP");
+        lista.adicionar("RJ");
+        
+        System.out.println("Tamanho: " + lista.getTamanho());
+        for(int i=0; i < lista.getTamanho(); i++){
+            System.out.println(lista.get(i).getValor());
+        }
     }
     
 }
