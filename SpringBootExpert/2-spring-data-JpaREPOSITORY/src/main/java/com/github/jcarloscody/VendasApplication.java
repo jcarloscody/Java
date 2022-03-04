@@ -22,46 +22,56 @@ public class VendasApplication {
     @Bean
     public CommandLineRunner init(@Autowired Clientes clientes, @Autowired Pedidos pedidos){
         return args -> {
+            System.out.println("");System.out.println("");
             System.out.println("SALVANDO COM JpaRepositoruy ...");
             Cliente c1 = clientes.save(new Cliente("josue"));
             Cliente c2 = clientes.save(new Cliente("marcos"));
             Cliente c3 = clientes.save(new Cliente("silveira"));
             clientes.procurarPorNome("%su%").forEach(System.out::println);
 
+            System.out.println("");System.out.println("");
             System.out.println("BUSCANDO TODOS COM JpaRepositoruy ...");
             clientes.findAll().forEach(System.out::println);
 
+            System.out.println("");System.out.println("");
             System.out.println("ATUALIZANDO TODOS COM JpaRepositoruy ...");
             clientes.findAll().forEach(c -> {
                 c.setNome(c.getNome() + " Atualizando teste");
                 clientes.save(c);
             });
 
+            System.out.println("");System.out.println("");
             System.out.println("SALVANDO PEDIDOS ...");
             Pedido p = new Pedido();
             p.setCliente(c1);
             p.setDatePedido(LocalDate.now());
-            p.setTotal(15.56);
+            p.setTotal(BigDecimal.valueOf(22.22));
             pedidos.save(p);
 
+            System.out.println("");System.out.println("");
             System.out.println("BUSCANDO PEDIDOS DOS CLIENTES...");
             System.out.println(clientes.findClienteFetchPedidos(c1.getId()).getPedidos());
 
+            System.out.println("");System.out.println("");
             System.out.println("BUSCANDO APOS ATUALIZACAO ...");
             clientes.findAll().forEach(System.out::println);
 
+            System.out.println("");System.out.println("");
             System.out.println("PESQUISA...  fazendo metodo proprio");
             System.out.println("AQUIIIIIIIIIIIIIII:::::  " + clientes.findOneByNomeLike("os"));
 
             System.out.println(clientes.findOneByNome("josue"));
             clientes.findByNomeOrId("josue", 2).forEach(System.out::println);
 
+            System.out.println("");System.out.println("");
+            System.out.println("Carregando os pedidos do cliente ...");
+            pedidos.findByCliente(c1).forEach(System.out::println);
 
 
+            System.out.println("");System.out.println("");
             System.out.println("DELETANDO TODOS TODOS COM JpaRepositoruy ...");
-            clientes.findAll().forEach(cliente -> {
-                clientes.delete(cliente);
-            });
+            //clientes.findAll().forEach(cliente -> clientes.delete(cliente));
+            clientes.findAll().forEach(clientes::delete);
 
 
 

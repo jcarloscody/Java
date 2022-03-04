@@ -17,8 +17,8 @@ public class Pedido {
     @Column(name = "data_pedido")
     private LocalDate datePedido;
 
-    @Column(name = "total", length = 5, precision = 2)//aceita até 20 caracteres, precision sao cassas decimais
-    private Double total;
+    @Column(name = "total",precision = 20, scale = 2)//aceita até 20 caracteres com 2 casas decimais
+    private BigDecimal total;
 
     @ManyToOne
     @JoinColumn(name = "cliente_id")
@@ -52,11 +52,11 @@ public class Pedido {
         this.datePedido = datePedido;
     }
 
-    public Double getTotal() {
+    public BigDecimal getTotal() {
         return total;
     }
 
-    public void setTotal(Double total) {
+    public void setTotal(BigDecimal total) {
         this.total = total;
     }
 
