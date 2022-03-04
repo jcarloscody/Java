@@ -2,7 +2,9 @@ package com.github.jcarloscody;
 
 
 import com.github.jcarloscody.domain.entity.Cliente;
-import com.github.jcarloscody.domain.repositorio.Clientes;
+import com.github.jcarloscody.domain.entity.Pedido;
+import com.github.jcarloscody.domain.repository.Clientes;
+import com.github.jcarloscody.domain.repository.Pedidos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,17 +12,20 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
 @SpringBootApplication
 @RestController
 public class VendasApplication {
 
     @Bean
-    public CommandLineRunner init( @Autowired Clientes clientes){
+    public CommandLineRunner init(@Autowired Clientes clientes, @Autowired Pedidos pedidos){
         return args -> {
             System.out.println("SALVANDO COM JpaRepositoruy ...");
-            clientes.save(new Cliente("josue"));
-            clientes.save(new Cliente("marcos"));
-            clientes.save(new Cliente("silveira"));
+            Cliente c1 = clientes.save(new Cliente("josue"));
+            Cliente c2 = clientes.save(new Cliente("marcos"));
+            Cliente c3 = clientes.save(new Cliente("silveira"));
             clientes.procurarPorNome("%su%").forEach(System.out::println);
 
             System.out.println("BUSCANDO TODOS COM JpaRepositoruy ...");
@@ -32,7 +37,15 @@ public class VendasApplication {
                 clientes.save(c);
             });
 
+            System.out.println("SALVANDO PEDIDOS ...");
+            Pedido p = new Pedido();
+            p.setCliente(c1);
+            p.setDatePedido(LocalDate.now());
+            p.setTotal(15.56);
+            pedidos.save(p);
 
+            System.out.println("BUSCANDO PEDIDOS DOS CLIENTES...");
+            System.out.println(clientes.findClienteFetchPedidos(c1.getId()).getPedidos());
 
             System.out.println("BUSCANDO APOS ATUALIZACAO ...");
             clientes.findAll().forEach(System.out::println);
@@ -43,10 +56,14 @@ public class VendasApplication {
             System.out.println(clientes.findOneByNome("josue"));
             clientes.findByNomeOrId("josue", 2).forEach(System.out::println);
 
+
+
             System.out.println("DELETANDO TODOS TODOS COM JpaRepositoruy ...");
             clientes.findAll().forEach(cliente -> {
                 clientes.delete(cliente);
             });
+
+
 
         };
     }

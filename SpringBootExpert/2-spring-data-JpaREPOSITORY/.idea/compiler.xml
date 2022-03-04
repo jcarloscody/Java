@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="2-spring-data-JpaREPOSITORY" />
         <module name="springbootExpertvendas" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="2-spring-data-JpaREPOSITORY" options="-parameters" />
       <module name="springbootExpertvendas" options="-parameters" />
     </option>
   </component>

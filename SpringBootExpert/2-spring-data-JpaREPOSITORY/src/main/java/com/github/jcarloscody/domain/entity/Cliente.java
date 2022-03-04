@@ -1,6 +1,7 @@
 package com.github.jcarloscody.domain.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity  //mapeando com a especificao jpa
 @Table(name = "cliente")  //nao é obrigatorio usar, a mesnos que o nome no banco seja diferente. pode usar o parametro shema=""
@@ -13,6 +14,9 @@ public class Cliente {
 
     @Column(length = 100)
     private  String nome;
+
+    @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY) //um client para muitos pedidos - este aqui é opcional, pq quem tem a chave é o pedido a foreign key. por isso o mapeamento
+    private Set<Pedido> pedidos; //poderia usar collection, list no lugar de set   //aqui estamos usando list. podemos usar qq um. um detalhe é que Set nao aceita itens repetidos
 
     public Cliente() {
     }
@@ -48,5 +52,13 @@ public class Cliente {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 '}';
+    }
+
+    public Set<Pedido> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(Set<Pedido> pedidos) {
+        this.pedidos = pedidos;
     }
 }

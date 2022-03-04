@@ -1,14 +1,31 @@
 package com.github.jcarloscody.domain.entity;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Set;
 
+@Entity
+@Table(name = "pedido")
 public class Pedido {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private Cliente cliente;
+
+    @Column(name = "data_pedido")
     private LocalDate datePedido;
-    private BigDecimal total;
+
+    @Column(name = "total", length = 5, precision = 2)//aceita até 20 caracteres, precision sao cassas decimais
+    private Double total;
+
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
+
+    @OneToMany(mappedBy = "pedido")
+    private List<ItemPedido> itens; //aqui estamos usando list. podemos usar qq um. um detalhe é que Set nao aceita itens repetidos
 
 
     public Integer getId() {
@@ -35,11 +52,26 @@ public class Pedido {
         this.datePedido = datePedido;
     }
 
-    public BigDecimal getTotal() {
+    public Double getTotal() {
         return total;
     }
 
-    public void setTotal(BigDecimal total) {
+    public void setTotal(Double total) {
         this.total = total;
+    }
+
+    public List<ItemPedido> getItens() {
+        return itens;
+    }
+
+    public void setItens(List<ItemPedido> itens) {
+        this.itens = itens;
+    }
+
+    @Override
+    public String toString() {
+        return "Pedido{" +
+                "datePedido=" + datePedido +
+                ", total=" + total ;
     }
 }
