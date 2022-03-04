@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50bd4d5f-722e-4b58-868b-94e43ab628a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2-spring-data-JpaREPOSITORY/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2-spring-data-JpaREPOSITORY/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="50bd4d5f-722e-4b58-868b-94e43ab628a6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
