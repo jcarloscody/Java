@@ -2,10 +2,14 @@ package com.github.jcarloscody.rest.controller;
 
 import com.github.jcarloscody.domain.entity.Cliente;
 import com.github.jcarloscody.domain.repository.Clientes;
+
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -88,5 +92,19 @@ public class ClienteController {
                      return ResponseEntity.noContent().build();
                 })
                 .orElseGet(()-> ResponseEntity.notFound().build());//orElseGet recebe como param um supplier que é uma interface funcional q tem um metodo q nao recebe nenhum paramero e retorna qq coisa
+    }
+
+
+    @GetMapping("")   //formato da url  ...?param1=value&param2=value
+    public ResponseEntity find( Cliente filtro){
+        ExampleMatcher matcher = ExampleMatcher
+                .matching()
+                .withIgnoreCase()
+                .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING);
+
+        Example example = Example.of(filtro, matcher);
+        List<Cliente> lista = clientes.findAll(example);
+
+        return ResponseEntity.ok(lista);
     }
 }

@@ -20,9 +20,9 @@ public class VendasApplication {
         return args -> {
             System.out.println("");System.out.println("");
             System.out.println("SALVANDO COM JpaRepositoruy ...");
-            Cliente c1 = clientes.save(new Cliente("josue"));
-            Cliente c2 = clientes.save(new Cliente("marcos"));
-            Cliente c3 = clientes.save(new Cliente("silveira"));
+            Cliente c1 = clientes.save(new Cliente("josue", "11111111111"));
+            Cliente c2 = clientes.save(new Cliente("marcos", "22222222222"));
+            Cliente c3 = clientes.save(new Cliente("silveira", "33333333333"));
 
 
           /*  System.out.println("");System.out.println("");

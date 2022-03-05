@@ -1,6 +1,7 @@
 package com.github.jcarloscody.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -17,6 +18,9 @@ public class Cliente {
     @Column(length = 100)
     private  String nome;
 
+    @Length(min = 11, max = 11)
+    private String cpf;
+
     @JsonIgnore//vai dizer para o passer, para o objeto transformador em json, q deve ignorar esta propriedade
     @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY) //um client para muitos pedidos - este aqui é opcional, pq quem tem a chave é o pedido a foreign key. por isso o mapeamento
     private Set<Pedido> pedidos; //poderia usar collection, list no lugar de set   //aqui estamos usando list. podemos usar qq um. um detalhe é que Set nao aceita itens repetidos
@@ -24,12 +28,13 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Cliente(String nome) {
-        this.nome = nome;
+    public Cliente(String nome, String cpf) {
+        this.nome = nome;        this.cpf = cpf;
     }
 
-    public Cliente(Integer id, String nome) {
+    public Cliente(Integer id, String nome, String cpf) {
         this.id = id;
+        this.cpf = cpf;
         this.nome = nome;
     }
 
@@ -63,5 +68,13 @@ public class Cliente {
 
     public void setPedidos(Set<Pedido> pedidos) {
         this.pedidos = pedidos;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 }
