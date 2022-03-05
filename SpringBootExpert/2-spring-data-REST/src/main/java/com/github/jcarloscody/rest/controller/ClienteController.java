@@ -84,7 +84,6 @@ public class ClienteController {
         return this.clientes.findById(id)
                 .map(clienteExistente -> {
                     c.setId(clienteExistente.getId());
-                    c.setNome(clienteExistente.getNome());
                      this.clientes.save(c);
                      return ResponseEntity.noContent().build();
                 })
