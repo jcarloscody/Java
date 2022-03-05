@@ -1,5 +1,7 @@
 package com.github.jcarloscody.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -15,6 +17,7 @@ public class Cliente {
     @Column(length = 100)
     private  String nome;
 
+    @JsonIgnore//vai dizer para o passer, para o objeto transformador em json, q deve ignorar esta propriedade
     @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY) //um client para muitos pedidos - este aqui é opcional, pq quem tem a chave é o pedido a foreign key. por isso o mapeamento
     private Set<Pedido> pedidos; //poderia usar collection, list no lugar de set   //aqui estamos usando list. podemos usar qq um. um detalhe é que Set nao aceita itens repetidos
 
