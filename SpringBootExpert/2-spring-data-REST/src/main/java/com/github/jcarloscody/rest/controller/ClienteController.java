@@ -77,4 +77,17 @@ public class ClienteController {
         return ResponseEntity.notFound().build();
     }
 
+
+    @PutMapping("/{id}") //como aqui é put, o client deve mandar todas as informacoes, caso contrario os valores ficarão nulos, diferente do patch
+    @ResponseBody
+    public ResponseEntity updates(@PathVariable Integer id, @RequestBody Cliente c){
+        return this.clientes.findById(id)
+                .map(clienteExistente -> {
+                    c.setId(clienteExistente.getId());
+                    c.setNome(clienteExistente.getNome());
+                     this.clientes.save(c);
+                     return ResponseEntity.noContent().build();
+                })
+                .orElseGet(()-> ResponseEntity.notFound().build());//orElseGet recebe como param um supplier que é uma interface funcional q tem um metodo q nao recebe nenhum paramero e retorna qq coisa
+    }
 }
