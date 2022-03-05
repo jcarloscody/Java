@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50bd4d5f-722e-4b58-868b-94e43ab628a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/ClienteControllerOutraForma.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/PedidoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/ProdutoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/service/PedidoServiceInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/service/implementacao/PedidoServiceImplementacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/VendasApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/VendasApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/entity/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/entity/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/ClienteControllerOutraForma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/ClienteControllerOutraForma.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
