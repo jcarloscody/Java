@@ -28,11 +28,11 @@ public class VendasApplication {
             Cliente c2 = repositoryClientes.save(new Cliente("marcos", "22222222222"));
             Cliente c3 = repositoryClientes.save(new Cliente("silveira", "33333333333"));
 
-            Produto p1 = repositoryProdutos.save(new Produto( "TV", BigDecimal.valueOf(565.58)));
-            Produto p2 = repositoryProdutos.save(new Produto( "carro", BigDecimal.valueOf(56565.58)));
-            Produto p3 = repositoryProdutos.save(new Produto( "dvd", BigDecimal.valueOf(100.56)));
-            Produto p4 = repositoryProdutos.save(new Produto( "moto", BigDecimal.valueOf(12565.89)));
-            Produto p5 = repositoryProdutos.save(new Produto( "note", BigDecimal.valueOf(1000.56)));
+            Produto p1 = repositoryProdutos.save(new Produto(null, "TV", BigDecimal.valueOf(565.58)));
+            Produto p2 = repositoryProdutos.save(new Produto( null,"carro", BigDecimal.valueOf(56565.58)));
+            Produto p3 = repositoryProdutos.save(new Produto( null,"dvd", BigDecimal.valueOf(100.56)));
+            Produto p4 = repositoryProdutos.save(new Produto(null, "moto", BigDecimal.valueOf(12565.89)));
+            Produto p5 = repositoryProdutos.save(new Produto(null, "note", BigDecimal.valueOf(1000.56)));
 
           /*  System.out.println("");System.out.println("");
             System.out.println("BUSCANDO TODOS COM JpaRepositoruy ...");

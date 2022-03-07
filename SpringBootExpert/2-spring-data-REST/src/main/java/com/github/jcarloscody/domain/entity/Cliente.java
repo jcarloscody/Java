@@ -1,6 +1,7 @@
 package com.github.jcarloscody.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
@@ -8,6 +9,12 @@ import java.util.Set;
 
 @Entity  //mapeando com a especificao jpa
 @Table(name = "cliente")  //nao é obrigatorio usar, a mesnos que o nome no banco seja diferente. pode usar o parametro shema=""
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode
+@NoArgsConstructor //gerar construtor sem argumentos
+@AllArgsConstructor // construtor com todos os argumentos
 public class Cliente {
 
     @Id
@@ -25,56 +32,10 @@ public class Cliente {
     @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY) //um client para muitos pedidos - este aqui é opcional, pq quem tem a chave é o pedido a foreign key. por isso o mapeamento
     private Set<Pedido> pedidos; //poderia usar collection, list no lugar de set   //aqui estamos usando list. podemos usar qq um. um detalhe é que Set nao aceita itens repetidos
 
-    public Cliente() {
-    }
 
     public Cliente(String nome, String cpf) {
         this.nome = nome;        this.cpf = cpf;
     }
 
-    public Cliente(Integer id, String nome, String cpf) {
-        this.id = id;
-        this.cpf = cpf;
-        this.nome = nome;
-    }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    @Override
-    public String toString() {
-        return "Cliente{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                '}';
-    }
-
-    public Set<Pedido> getPedidos() {
-        return pedidos;
-    }
-
-    public void setPedidos(Set<Pedido> pedidos) {
-        this.pedidos = pedidos;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
 }
