@@ -31,6 +31,7 @@ public class PedidoDTO {
 
     private Integer cliente;
     private BigDecimal total;
+    private String status;
     List<ItemPedidoDTO> listaItemPedidoDTO;
 
 

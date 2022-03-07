@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50bd4d5f-722e-4b58-868b-94e43ab628a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/ApiErrors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/ApplicationControllerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/enums/StatusPedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/exception/PedidoNaoEncontradoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/dto/AtualizacaoStatusPedidoDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/entity/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/entity/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/repository/Pedidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/repository/Pedidos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/ApiErrors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/ApiErrors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/ApplicationControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/ApplicationControllerAdvice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/PedidoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/PedidoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/dto/InformacaoItemPedidoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/dto/InformacaoItemPedidoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/dto/InformacoesPedidoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/dto/InformacoesPedidoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/dto/PedidoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/dto/PedidoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/service/PedidoServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/service/PedidoServiceInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/service/implementacao/PedidoServiceImplementacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/service/implementacao/PedidoServiceImplementacao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +87,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.github.jcarloscody.domain.entity" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.github.jcarloscody.rest.controller" />
     </key>

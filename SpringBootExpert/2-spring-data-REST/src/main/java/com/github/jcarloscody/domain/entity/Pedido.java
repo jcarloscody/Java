@@ -1,14 +1,17 @@
 package com.github.jcarloscody.domain.entity;
 
+import com.github.jcarloscody.domain.enums.StatusPedido;
+import lombok.Data;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "pedido")
-public class Pedido {
+@Data
+public class Pedido{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,6 +29,10 @@ public class Pedido {
 
     @OneToMany(mappedBy = "pedido")
     private List<ItemPedido> itens; //aqui estamos usando list. podemos usar qq um. um detalhe é que Set nao aceita itens repetidos
+
+    @Enumerated(EnumType.STRING)  //vamos guardar como string,   ordinal seria a posicao
+    @Column(name = "status")
+    private StatusPedido status;
 
 
     public Integer getId() {

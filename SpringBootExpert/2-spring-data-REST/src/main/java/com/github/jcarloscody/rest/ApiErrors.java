@@ -1,6 +1,5 @@
 package com.github.jcarloscody.rest;
 
-import lombok.Data;
 import lombok.Getter;
 
 import java.util.Arrays;
