@@ -31,7 +31,7 @@ public class PedidoController {
 
 */
 
-    @PostMapping
+    @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
     public Integer save (@RequestBody PedidoDTO pedidoDTO){
         Pedido pedido = pedidoServiceInterface.salvar(pedidoDTO);

@@ -34,7 +34,7 @@ public class PedidoServiceImplementacao implements PedidoServiceInterface {
     public Pedido salvar(PedidoDTO pedidoDTO) {
         Integer idCliente = pedidoDTO.getCliente();
         Cliente cliente = repositoryClientes.findById(idCliente).orElseThrow(()->
-            new RegraNegocioException("CODIGO DO CLIENTE INVÁLIDO!")
+            new RegraNegocioException("CODIGO DO CLIENTE INVÁLIDO!" + idCliente)
         );
 
         Pedido pedido = new Pedido();
@@ -62,7 +62,7 @@ public class PedidoServiceImplementacao implements PedidoServiceInterface {
                 .map(itemDTO -> {
                     Integer idProduto = itemDTO.getProduto();
                     Produto produto = repositoryProdutos.findById(idProduto).orElseThrow(()->
-                            new RegraNegocioException("CODIGO DO CLIENTE INVÁLIDO!" + idProduto));
+                            new RegraNegocioException("CODIGO DO PRODUTO INVÁLIDO!" + idProduto));
 
                     ItemPedido itemPedido = new ItemPedido();
                     itemPedido.setQuantidade(itemDTO.getQuantidade());
