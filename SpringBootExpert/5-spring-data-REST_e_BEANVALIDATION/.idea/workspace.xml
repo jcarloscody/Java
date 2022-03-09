@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50bd4d5f-722e-4b58-868b-94e43ab628a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/config/InternacionalizacaoConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/validation/NotEmptyList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/validation/constraintvalidation/NotEmptyListValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../2-spring-data-JPAstricsensu/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../2-spring-data-JPAstricsensu/.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../2-spring-data-JPAstricsensu/.idea/jarRepositories.xml" beforeDir="false" />
@@ -40,41 +44,41 @@
       <change beforePath="$PROJECT_DIR$/../2-spring-data-JpaREPOSITORY/src/main/java/com/github/jcarloscody/domain/repository/Pedidos.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../2-spring-data-JpaREPOSITORY/src/main/java/com/github/jcarloscody/domain/repository/Produtos.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../2-spring-data-JpaREPOSITORY/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/VendasApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/entity/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/entity/ItemPedido.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/entity/Pedido.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/entity/Produto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/enums/StatusPedido.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/repository/Clientes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/repository/ItemsPedido.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/repository/Pedidos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/domain/repository/Produtos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/exception/PedidoNaoEncontradoException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/exception/RegraNegocioException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/ApiErrors.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/ApplicationControllerAdvice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/ClienteController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/ClienteControllerOutraForma.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/PedidoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/controller/ProdutoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/dto/AtualizacaoStatusPedidoDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/dto/InformacaoItemPedidoDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/dto/InformacoesPedidoDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/dto/ItemPedidoDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/rest/dto/PedidoDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/service/PedidoServiceInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/jcarloscody/service/implementacao/PedidoServiceImplementacao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2-spring-data-REST/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/VendasApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/domain/entity/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/domain/entity/ItemPedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/domain/entity/Pedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/domain/entity/Produto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/domain/enums/StatusPedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/domain/repository/Clientes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/domain/repository/ItemsPedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/domain/repository/Pedidos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/domain/repository/Produtos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/exception/PedidoNaoEncontradoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/exception/RegraNegocioException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/rest/ApiErrors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/rest/controller/ApplicationControllerAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/rest/controller/ClienteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/rest/controller/ClienteControllerOutraForma.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/rest/controller/PedidoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/rest/controller/ProdutoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/rest/dto/AtualizacaoStatusPedidoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/rest/dto/InformacaoItemPedidoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/rest/dto/InformacoesPedidoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/rest/dto/ItemPedidoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/rest/dto/PedidoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/service/PedidoServiceInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/java/com/github/jcarloscody/service/implementacao/PedidoServiceImplementacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2-spring-data-REST/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +89,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -136,7 +141,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/github/jcarloscody" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../5-spring-data-REST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -155,7 +160,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.github.jcarloscody.VendasApplication" />
-      <module name="2-spring-data-REST" />
+      <module name="5-spring-data-REST" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.github.jcarloscody.*" />
