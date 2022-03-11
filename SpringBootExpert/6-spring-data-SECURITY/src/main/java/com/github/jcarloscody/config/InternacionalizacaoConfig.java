@@ -11,7 +11,7 @@ import java.util.Locale;
 @Configuration
 public class InternacionalizacaoConfig {
 
-    @Bean
+    @Bean  //fiz lá no controller pedidoDTO
     public MessageSource messageSource(){
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
         messageSource.setBasename("classpath:messages");
