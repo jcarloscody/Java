@@ -10,6 +10,7 @@
         <module name="2-spring-data-JpaREPOSITORY" />
         <module name="springbootExpertvendas" />
         <module name="2-spring-data-REST" />
+        <module name="6-spring-data-SECURITY-JWT" />
         <module name="6-spring-data-SECURITY" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,7 @@
       <module name="2-spring-data-REST" options="-parameters" />
       <module name="5-spring-data-REST" options="-parameters" />
       <module name="6-spring-data-SECURITY" options="-parameters" />
+      <module name="6-spring-data-SECURITY-JWT" options="-parameters" />
       <module name="springbootExpertvendas" options="-parameters" />
     </option>
   </component>
