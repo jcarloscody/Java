@@ -1,4 +1,4 @@
-package com.github.jcarloscody.security;
+package com.github.jcarloscody.security.jwt;
 
 import com.github.jcarloscody.domain.entity.Usuario;
 import io.jsonwebtoken.Claims;

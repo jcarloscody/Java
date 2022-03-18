@@ -1,4 +1,4 @@
-package com.github.jcarloscody.security;
+package com.github.jcarloscody.security.jwt;
 
 import com.github.jcarloscody.service.implementacao.UsuarioServiceImpl;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
