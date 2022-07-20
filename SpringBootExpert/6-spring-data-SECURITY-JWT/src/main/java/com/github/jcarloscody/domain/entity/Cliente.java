@@ -8,7 +8,7 @@ import org.hibernate.validator.constraints.br.CPF;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.util.Set;
-
+//https://www.jdoodle.com/online-java-compiler/
 @Entity  //mapeando com a especificao jpa
 @Table(name = "cliente")  //nao é obrigatorio usar, a mesnos que o nome no banco seja diferente. pode usar o parametro shema=""
 @Getter
